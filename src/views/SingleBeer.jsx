@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import { loadSingleBeer } from './../services/beers';
 
 class SingleBeer extends Component {
@@ -29,6 +30,7 @@ class SingleBeer extends Component {
     const beer = this.state.beer;
     return (
       <div>
+        <Header />
         <img src={beer.image_url} alt="" style={{ maxHeight: '200px' }} />
         <h1>{beer.name}</h1>
         <h5>{beer.attenuation_level}</h5>
